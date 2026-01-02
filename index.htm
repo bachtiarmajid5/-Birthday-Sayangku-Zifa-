@@ -55,6 +55,16 @@
       margin-bottom: 10px;
     }
 
+    /* RESPONSIVE HP */
+    @media (max-width: 768px) {
+      h1 { font-size: 1.6em; }
+      p { font-size: 1em; }
+      .slide img {
+        max-width: 95%;
+        max-height: 60vh;
+      }
+    }
+
     p {
       font-size: 1.2em;
       margin-top: 15px;
@@ -118,10 +128,22 @@
 
     .controls {
       position: fixed;
-      bottom: 30px;
+      bottom: env(safe-area-inset-bottom, 20px);
+      left: 50%;
+      transform: translateX(-50%);
       display: flex;
-      gap: 20px;
+      gap: 12px;
       z-index: 3;
+    }
+
+    .controls button {
+      padding: 14px 22px;
+      font-size: 15px;
+      border: none;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.9);
+      color: #ff6f91;
+      cursor: pointer;
     }
 
     .controls button {
